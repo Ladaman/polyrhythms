@@ -44,7 +44,6 @@ const calculateNextImpactTime = (currentImpactTime, velocity) => {
 };
 
 const arcs = colors.map((color, index) => {
-  //   console.log(index);
   const audio = new Audio(`./assets/audio/audio-${index + 1}.wav`);
 
   audio.volume = volume;
@@ -52,10 +51,6 @@ const arcs = colors.map((color, index) => {
   const numberOfLoops = 50 - index;
   const oneFullLoop = 2 * Math.PI;
   const velocity = (oneFullLoop * numberOfLoops) / duration;
-  console.log("numberOfLoops:", numberOfLoops);
-  console.log("oneFullLoop:", oneFullLoop);
-  console.log("velocity:", velocity);
-
   return {
     color,
     audio,
@@ -110,7 +105,6 @@ const draw = () => {
     const modDistance = distance % maxAngle;
     const adjustedDistance =
       modDistance >= Math.PI ? modDistance : maxAngle - modDistance;
-    //   console.log("modDistance:", modDistance);
 
     const x = center.x + arcRadius * Math.cos(adjustedDistance);
     const y = center.y + arcRadius * Math.sin(adjustedDistance);
