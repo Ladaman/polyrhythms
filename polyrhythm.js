@@ -8,7 +8,7 @@ document.onvisibilitychange = () => {
   soundEnabled = false;
 };
 paper.onclick = () => {
-  soundEnabled = !soundEnabled;
+  soundEnabled = true;
 };
 
 const colors = [
